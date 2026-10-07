@@ -21,6 +21,8 @@ class GameEngine:
         self.balloons = []
         self.frames_until_spawn = 0
         self.score = 0
+        self.lives = 3
+        self.game_over = False
 
     def _spawn_balloon(self):
         kinds = list(BALLOON_TYPES.keys())
@@ -43,12 +45,18 @@ class GameEngine:
         ))
 
     def handle_click(self, pos):
+        if self.game_over:
+            return
+
         popped = check_pop(self.balloons, pos)
         if popped is not None:
             self.balloons.remove(popped)
             self.score += popped.points
 
     def update(self):
+        if self.game_over:
+            return
+
         self.frames_until_spawn -= 1
         if self.frames_until_spawn <= 0:
             self._spawn_balloon()
@@ -57,9 +65,28 @@ class GameEngine:
         for b in self.balloons:
             b.update()
 
-        self.balloons = [b for b in self.balloons if not b.is_past_bottom(HEIGHT)]
+        active_balloons = []
+        for b in self.balloons:
+            if b.is_past_bottom(HEIGHT):
+                if b.kind != "penalty":
+                    self.lives -= 1
+            else:
+                active_balloons.append(b)
+        
+        self.balloons = active_balloons
+
+        if self.lives <= 0:
+            self.lives = 0
+            self.game_over = True
 
     def draw(self, surface, font):
         from game import renderer
         renderer.draw_scene(surface, self.balloons, font)
+        
+        # Draw Score (Top-Left)
         renderer.draw_text(surface, font, f"Score: {self.score}", (10, 10))
+        
+        # Draw Lives (Top-Right)
+        lives_text = f"Lives: {self.lives}"
+        text_width = font.size(lives_text)[0]
+        renderer.draw_text(surface, font, lives_text, (WIDTH - text_width - 10, 10))
