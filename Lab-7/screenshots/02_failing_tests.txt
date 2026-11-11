@@ -1,0 +1,612 @@
+$ python -m pytest test_processor.py   (against ORIGINAL processor.py)
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0
+rootdir: C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7
+plugins: anyio-4.12.1, hypothesis-6.170.15, langsmith-0.6.8
+collected 8 items
+
+test_processor.py FF.F.FF.                                               [100%]
+
+================================== FAILURES ===================================
+____________________ test_parse_transit_corridor_no_crash _____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |     ~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 43, in test_parse_transit_corridor_no_crash
+  |     def test_parse_transit_corridor_no_crash(s):
+  |                    ^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\hypothesis\core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 45, in test_parse_transit_corridor_no_crash
+    |     result = parse_transit_corridor(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 2, in parse_transit_corridor
+    |     orig, dest, zones_str = corridor_code.strip().split('-')
+    |     ^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 3, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 47, in test_parse_transit_corridor_no_crash
+    |     assert False, f"parse_transit_corridor crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: parse_transit_corridor crashed on '' with: ValueError: not enough values to unpack (expected 3, got 1)
+    | assert False
+    | Failing test case: test_parse_transit_corridor_no_crash(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 45, in test_parse_transit_corridor_no_crash
+    |     result = parse_transit_corridor(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 2, in parse_transit_corridor
+    |     orig, dest, zones_str = corridor_code.strip().split('-')
+    |                             ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 47, in test_parse_transit_corridor_no_crash
+    |     assert False, f"parse_transit_corridor crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: parse_transit_corridor crashed on None with: AttributeError: 'NoneType' object has no attribute 'strip'
+    | assert False
+    | Failing test case: test_parse_transit_corridor_no_crash(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+_______________ test_parse_transit_corridor_structured_no_crash _______________
+
+s = ''
+
+    @given(corridor_like | st.integers().map(lambda n: f"AB-CD-{n}"))
+    def test_parse_transit_corridor_structured_no_crash(s):
+        try:
+>           result = parse_transit_corridor(s)
+
+test_processor.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+corridor_code = ''
+
+    def parse_transit_corridor(corridor_code):
+>       orig, dest, zones_str = corridor_code.strip().split('-')
+E       ValueError: not enough values to unpack (expected 3, got 1)
+
+processor.py:2: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    @given(corridor_like | st.integers().map(lambda n: f"AB-CD-{n}"))
+>   def test_parse_transit_corridor_structured_no_crash(s):
+
+test_processor.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = ''
+
+    @given(corridor_like | st.integers().map(lambda n: f"AB-CD-{n}"))
+    def test_parse_transit_corridor_structured_no_crash(s):
+        try:
+            result = parse_transit_corridor(s)
+        except Exception as e:
+>           assert False, f"parse_transit_corridor crashed on {s!r} with: {type(e).__name__}: {e}"
+E           AssertionError: parse_transit_corridor crashed on '' with: ValueError: not enough values to unpack (expected 3, got 1)
+E           assert False
+E           Failing test case: test_parse_transit_corridor_structured_no_crash(
+E               s='',
+E           )
+E           Explanation:
+E               These lines were always and only run by failing test cases:
+E                   C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:55
+
+test_processor.py:56: AssertionError
+____________________ test_lookup_concession_discount_safe _____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |     ~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 71, in test_lookup_concession_discount_safe
+  |     def test_lookup_concession_discount_safe(s):
+  |                    ^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\hypothesis\core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 73, in test_lookup_concession_discount_safe
+    |     result = lookup_concession_discount(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 16, in lookup_concession_discount
+    |     return discounts[category]
+    |            ~~~~~~~~~^^^^^^^^^^
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 75, in test_lookup_concession_discount_safe
+    |     assert False, f"lookup_concession_discount crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: lookup_concession_discount crashed on '' with: KeyError: ''
+    | assert False
+    | Failing test case: test_lookup_concession_discount_safe(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 73, in test_lookup_concession_discount_safe
+    |     result = lookup_concession_discount(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 8, in lookup_concession_discount
+    |     category = category_name.strip().upper()
+    |                ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 75, in test_lookup_concession_discount_safe
+    |     assert False, f"lookup_concession_discount crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: lookup_concession_discount crashed on None with: AttributeError: 'NoneType' object has no attribute 'strip'
+    | assert False
+    | Failing test case: test_lookup_concession_discount_safe(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+_____________________ test_compute_passenger_density_safe _____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |     ~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 89, in test_compute_passenger_density_safe
+  |     def test_compute_passenger_density_safe(s):
+  |                    ^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\hypothesis\core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 91, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 20, in compute_passenger_density
+    |     passengers = float(passengers_str)
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 93, in test_compute_passenger_density_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '/' with: ValueError: could not convert string to float: ''
+    | assert False
+    | Failing test case: test_compute_passenger_density_safe(
+    |     s='/',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 91, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 93, in test_compute_passenger_density_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '' with: ValueError: not enough values to unpack (expected 2, got 1)
+    | assert False
+    | Failing test case: test_compute_passenger_density_safe(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 91, in test_compute_passenger_density_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 93, in test_compute_passenger_density_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on None with: AttributeError: 'NoneType' object has no attribute 'split'
+    | assert False
+    | Failing test case: test_compute_passenger_density_safe(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+_______________ test_compute_passenger_density_structured_safe ________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |     ~~~~~~~~~~~~^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 98, in test_compute_passenger_density_structured_safe
+  |     @given(ratio_like)
+  |                    ^^^
+  |   File "C:\Users\annam\AppData\Local\Programs\Python\Python313\Lib\site-packages\hypothesis\core.py", line 2334, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 5 distinct failures. (5 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 105, in test_compute_passenger_density_structured_safe
+    |     assert result is None or (math.isfinite(result) and result >= 0), \
+    |         f"invalid density {result!r} for input {s!r}"
+    | AssertionError: invalid density -1.0 for input '1/-1'
+    | assert (-1.0 is None or (True and -1.0 >= 0))
+    |  +  where True = <built-in function isfinite>(-1.0)
+    |  +    where <built-in function isfinite> = math.isfinite
+    | Failing test case: test_compute_passenger_density_structured_safe(
+    |     s='1/-1',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:106
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 101, in test_compute_passenger_density_structured_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 22, in compute_passenger_density
+    |     density = passengers / km
+    |               ~~~~~~~~~~~^~~~
+    | ZeroDivisionError: float division by zero
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 103, in test_compute_passenger_density_structured_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '0/0' with: ZeroDivisionError: float division by zero
+    | assert False
+    | Failing test case: test_compute_passenger_density_structured_safe(
+    |     s='0/0',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:102
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 101, in test_compute_passenger_density_structured_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 21, in compute_passenger_density
+    |     km = float(km_str)
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 103, in test_compute_passenger_density_structured_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '0/' with: ValueError: could not convert string to float: ''
+    | assert False
+    | Failing test case: test_compute_passenger_density_structured_safe(
+    |     s='0/',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:102
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 101, in test_compute_passenger_density_structured_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 20, in compute_passenger_density
+    |     passengers = float(passengers_str)
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 103, in test_compute_passenger_density_structured_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '/' with: ValueError: could not convert string to float: ''
+    | assert False
+    | Failing test case: test_compute_passenger_density_structured_safe(
+    |     s='/',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:102
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 101, in test_compute_passenger_density_structured_safe
+    |     result = compute_passenger_density(s)
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 19, in compute_passenger_density
+    |     passengers_str, km_str = occupancy_ratio_str.split('/')
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py", line 103, in test_compute_passenger_density_structured_safe
+    |     assert False, f"compute_passenger_density crashed on {s!r} with: {type(e).__name__}: {e}"
+    | AssertionError: compute_passenger_density crashed on '' with: ValueError: not enough values to unpack (expected 2, got 1)
+    | assert False
+    | Failing test case: test_compute_passenger_density_structured_safe(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\test_processor.py:102
+    +------------------------------------
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_parse_transit_corridor_no_crash - ExceptionGro...
+FAILED test_processor.py::test_parse_transit_corridor_structured_no_crash - A...
+FAILED test_processor.py::test_lookup_concession_discount_safe - ExceptionGro...
+FAILED test_processor.py::test_compute_passenger_density_safe - ExceptionGrou...
+FAILED test_processor.py::test_compute_passenger_density_structured_safe - Ex...
+========================= 5 failed, 3 passed in 6.88s =========================

@@ -1,0 +1,30 @@
+$ python processor.py   (input: DT-UP-3 STUDENT 50/10.0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Multiplier: 0.5
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): Density: 5.0
+
+$ python processor.py   (input: DT-UP VIP 50/0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Invalid corridor code. Expected format ORIG-DEST-ZONES, e.g. DT-UP-3
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Unknown concession category. Valid: STANDARD, STUDENT, SENIOR, MILITARY, CHILD
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): Invalid input. Expected PASSENGERS/KM with passengers >= 0 and km > 0, e.g. 50/10.0
+
+$ python processor.py   (input: DT-UP-3 senior 1/-1)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Multiplier: 0.35
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): Invalid input. Expected PASSENGERS/KM with passengers >= 0 and km > 0, e.g. 50/10.0
+

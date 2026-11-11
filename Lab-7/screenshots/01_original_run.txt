@@ -1,0 +1,60 @@
+$ python processor.py   (valid input: DT-UP-3 / STUDENT / 50/10.0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Multiplier: 0.5
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): Density: 5.0
+
+$ python processor.py   (edge input: DT-UP / VIP / 50/0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Traceback (most recent call last):
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 39, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 28, in main
+    print(parse_transit_corridor(c_input))
+          ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 2, in parse_transit_corridor
+    orig, dest, zones_str = corridor_code.strip().split('-')
+    ^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 3, got 2)
+
+$ python processor.py   (edge input: DT-UP-3 / VIP / 50/0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Traceback (most recent call last):
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 39, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 32, in main
+    print("Multiplier:", lookup_concession_discount(cat_input))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 16, in lookup_concession_discount
+    return discounts[category]
+           ~~~~~~~~~^^^^^^^^^^
+KeyError: 'VIP'
+
+$ python processor.py   (edge input: DT-UP-3 / STUDENT / 50/0)
+==== Running parse_transit_corridor ====
+Enter corridor (e.g. DT-UP-3): Route DT->UP: 3 Zones, Fare $4.75
+
+==== Running lookup_concession_discount ====
+Enter concession category (e.g. STUDENT, SENIOR): Multiplier: 0.5
+
+==== Running compute_passenger_density ====
+Enter passengers/km (e.g. 50/10.0): Traceback (most recent call last):
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 39, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 36, in main
+    print("Density:", compute_passenger_density(d_input))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7\processor.py", line 22, in compute_passenger_density
+    density = passengers / km
+              ~~~~~~~~~~~^~~~
+ZeroDivisionError: float division by zero

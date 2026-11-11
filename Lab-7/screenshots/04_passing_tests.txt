@@ -1,0 +1,18 @@
+$ python -m pytest test_processor.py -v   (against FIXED processor.py)
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-8.3.4, pluggy-1.5.0 -- C:\Users\annam\AppData\Local\Programs\Python\Python313\python.exe
+hypothesis profile 'default'
+rootdir: C:\Users\annam\Documents\PESU\SEM 5\SE\LAB\7\SE-Labs-PES1UG24CS068\Lab-7
+plugins: anyio-4.12.1, hypothesis-6.170.15, langsmith-0.6.8
+collecting ... collected 8 items
+
+test_processor.py::test_parse_transit_corridor_no_crash PASSED           [ 12%]
+test_processor.py::test_parse_transit_corridor_structured_no_crash PASSED [ 25%]
+test_processor.py::test_parse_transit_corridor_valid PASSED              [ 37%]
+test_processor.py::test_lookup_concession_discount_safe PASSED           [ 50%]
+test_processor.py::test_lookup_concession_discount_valid PASSED          [ 62%]
+test_processor.py::test_compute_passenger_density_safe PASSED            [ 75%]
+test_processor.py::test_compute_passenger_density_structured_safe PASSED [ 87%]
+test_processor.py::test_compute_passenger_density_valid PASSED           [100%]
+
+============================== 8 passed in 2.71s ==============================
